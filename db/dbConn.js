@@ -7,7 +7,7 @@ module.exports = function getConnection(){
             host: process.env.HOST || "127.0.0.1",
             user: process.env.USER || "user",
             password: process.env.PASSWORD || "password",
-            database: process.env.DATABASE || "scoreboard"
+            database: process.env.DATABASE || "blog"
         }
     );
 }
