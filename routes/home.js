@@ -1,6 +1,9 @@
 const express = require("express");
 const router = express.Router();
+<<<<<<< HEAD
 const db = require("../db/dbConn");
+=======
+>>>>>>> feature/db-con
 
 
 router.get("/", (req, res) => {
