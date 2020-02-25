@@ -1,15 +1,10 @@
 const express = require("express");
 const router = express.Router();
-<<<<<<< HEAD
 const db = require("../db/dbConn");
-=======
->>>>>>> feature/db-con
 
-
+// server root
 router.get("/", (req, res) => {
-    res.send("<h1>Hello World</h>");
-});
-
-
+    res.send("<h1>Home route</h1>");
+})
 
 module.exports = router;
