@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Värd: 127.0.0.1
--- Tid vid skapande: 26 feb 2020 kl 11:01
+-- Tid vid skapande: 26 feb 2020 kl 11:25
 -- Serverversion: 10.4.11-MariaDB
 -- PHP-version: 7.4.2
 
@@ -41,7 +41,9 @@ CREATE TABLE `blog_db` (
 --
 
 INSERT INTO `blog_db` (`id`, `author`, `title`, `body`, `date`) VALUES
-(3, 'Emil Olsson', 'Test', 'Test text for database', '2020-02-26 00:00:00');
+(3, 'Emil Olsson', 'Test', 'Test text for database', '2020-02-26 00:00:00'),
+(4, 'Test name', 'Another test title', 'Bunch of text to test', '2020-02-27 00:00:00'),
+(5, 'Tester name', 'Database test title', 'jgijqigjeigjeqigh', '2020-02-28 00:00:00');
 
 --
 -- Index för dumpade tabeller
@@ -61,7 +63,7 @@ ALTER TABLE `blog_db`
 -- AUTO_INCREMENT för tabell `blog_db`
 --
 ALTER TABLE `blog_db`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
