@@ -25,7 +25,7 @@ router.get("/api/posts/all", (req, res) => {
         };
         
        const data = rows.map( (row) => {
-           return {Id: row.id, author: row.author, body: row.body, created: row.created, title: row.title};
+           return {Id: row.id, author: row.author, title: row.title, body: row.body, date: row.date};
        });
        res.json(data);
     });
