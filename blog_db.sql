@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Värd: 127.0.0.1
--- Tid vid skapande: 25 feb 2020 kl 15:50
+-- Tid vid skapande: 26 feb 2020 kl 08:51
 -- Serverversion: 10.4.11-MariaDB
 -- PHP-version: 7.4.2
 
@@ -27,8 +27,6 @@ SET time_zone = "+00:00";
 --
 -- Tabellstruktur `blog_db`
 --
-
-DROP TABLE IF EXISTS `blog_db`
 
 CREATE TABLE `blog_db` (
   `id` int(11) NOT NULL,
