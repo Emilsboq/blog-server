@@ -10,6 +10,7 @@ const app = express();
 // Route imports
 const postsRoute = require("./routes/posts");
 const homeRoute = require("./routes/home");
+const postRoute = require("./routes/post")
 // Variables
 const PORT = (process.env.PORT || 5000);
 
@@ -30,6 +31,7 @@ app.use((req, res, next) => {
 // Routes
 app.use(postsRoute);
 app.use(homeRoute);
+app.use(postRoute);
 
 // Start the server.
 app.listen(PORT, () => {
