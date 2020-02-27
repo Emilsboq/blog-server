@@ -4,8 +4,8 @@ const db = require("../db/dbConn");
 
 router.get("/api/post", (req, res) => {
 
-let queryString = "SELECT * FROM posts ORDER BY id DESC";
-    db().query(queryString, (error, rows, fields, id) => {
+let queryString = "SELECT * FROM posts ORDER BY `id`";
+    db().query(queryString, (error, rows, fields,) => {
         
         if(error) {
             res.sendStatus(500);
@@ -14,7 +14,7 @@ let queryString = "SELECT * FROM posts ORDER BY id DESC";
         };
         
        const data = rows.map( (row) => {
-           return {Id: row.id};
+        return {Id: row.id, Author: row.author, Title: row.title, body: row.body, Created: row.created_at, Updated: row.updated_at };
        });
        res.json(data);
     });
