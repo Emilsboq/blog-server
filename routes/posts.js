@@ -3,6 +3,7 @@ const router = express.Router();
 const db = require("../db/dbConn");
 
 
+
 router.get("/api/post", (req, res) => {
     res.send("<h1>Post</h>");
 });
@@ -14,8 +15,8 @@ router.get("/api/post/all", (req, res) => {
 
 });
 
-router.get("/api/posts/all", (req, res) => {
-    let queryString = "SELECT * FROM blog_db ORDER BY author DESC";
+router.get("localhost/api/posts/all", (req, res) => {
+    let queryString = "SELECT * FROM posts";
     db().query(queryString, (error, rows, fields) => {
         
         if(error) {
@@ -25,7 +26,7 @@ router.get("/api/posts/all", (req, res) => {
         };
         
        const data = rows.map( (row) => {
-           return {Id: row.id, author: row.author, title: row.title, body: row.body, date: row.date};
+           return {Id: row.id, Author: row.author, Title: row.title, body: row.body, Created: row.created_at, Updated: row.updated_at };
        });
        res.json(data);
     });
