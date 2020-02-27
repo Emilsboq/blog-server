@@ -2,13 +2,6 @@ const express = require("express");
 const router = express.Router();
 const db = require("../db/dbConn");
 
-
-
-router.get("/api/post", (req, res) => {
-    res.send("<h1>Post</h>");
-});
-
-
 router.get("/api/posts/all", (req, res) => {
     let queryString = "SELECT * FROM posts";
     db().query(queryString, (error, rows, fields) => {
