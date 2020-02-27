@@ -8,14 +8,8 @@ router.get("/api/post", (req, res) => {
     res.send("<h1>Post</h>");
 });
 
-router.get("/api/post/all", (req, res) => {
-    res.send("<h1>All posts</h>");
 
-    
-
-});
-
-router.get("api/posts/all", (req, res) => {
+router.get("/api/posts/all", (req, res) => {
     let queryString = "SELECT * FROM posts";
     db().query(queryString, (error, rows, fields) => {
         
