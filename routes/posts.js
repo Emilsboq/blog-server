@@ -15,7 +15,7 @@ router.get("/api/post/all", (req, res) => {
 
 });
 
-router.get("localhost/api/posts/all", (req, res) => {
+router.get("api/posts/all", (req, res) => {
     let queryString = "SELECT * FROM posts";
     db().query(queryString, (error, rows, fields) => {
         
