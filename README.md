@@ -2,6 +2,6 @@
 Detta är ett projekt för en blogg server.
 
 <h2>Inkluderar</h2>
--Home route.
--Posts route, som tar en till alla posts.
--Post route, som tar en till en specfik post baserat på vilket id man slår in.
+<p>-Home route.</p>
+<p>-Posts route, som tar en till alla posts.</p>
+<p>-Post route, som tar en till en specfik post baserat på vilket id man slår in.</p>
