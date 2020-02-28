@@ -2,22 +2,11 @@ const express = require("express");
 const router = express.Router();
 const db = require("../db/dbConn");
 
-router.get("/api/post", (req, res) => {
-
-let queryString = "SELECT * FROM posts ORDER BY `id`";
-    db().query(queryString, (error, rows, fields,) => {
-        
-        if(error) {
-            res.sendStatus(500);
-            res.end();
-            return;
-        };
-        
-       const data = rows.map( (row) => {
-        return {Id: row.id, Author: row.author, Title: row.title, body: row.body, Created: row.created_at, Updated: row.updated_at };
-       });
-       res.json(data);
-    });
+router.get("/api/post/:id",(req,res)=>{
+    db().query("SELECT * FROM posts WHERE id = ?",[req.params.id], (err,rows,fields)=>{
+        if(!err)
+        res.send(rows);
+    })
 });
 
 module.exports = router;
